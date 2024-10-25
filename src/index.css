@@ -32,7 +32,8 @@
 }
 
 .hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
     margin-bottom: 1rem;
     color: white;
     font-family: 'Red Hat Display', sans-serif;
@@ -41,6 +42,7 @@
 
 .hero p {
     font-size: 1rem;
+    font-weight: lighter;
     color: white;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -54,7 +56,10 @@
     color: white;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     text-decoration: none;
     z-index: 1;
+}
+
+.button:hover {
+    background: #F78BD8;
 }
