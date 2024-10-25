@@ -1,9 +1,10 @@
 import React from 'react';
+import '../index.css';
 
 const Button = ({ label, onClick }) => {
     return (
-        <button onClick={onClick}>
-            {label}
+        <button className='button' onClick={onClick}>
+            Button Label
         </button>
     );
 };
