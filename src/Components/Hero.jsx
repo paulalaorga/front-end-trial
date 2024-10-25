@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './styles/Hero.css'; 
+import '../index.css'; 
+import Button from './Button';
 
 const Hero = () => {
   const [bgImage, setBgImage] = useState('');
@@ -14,11 +15,15 @@ const Hero = () => {
       className="hero" 
       style={{
         backgroundImage: `url(${bgImage})`,
-        width:'100vw',
-        height:'100vh',
+        backgroundPosition:'center',
+        backgroundSize:'cover',
+        height: '50vh',
+        width: '100vw',
       }}
     >
-      <h1>Bienvenido a la página</h1>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Vestibulum Vehicula Mauris, Oro Vel Faucibus At Tristique</p>
+        <Button/>
     </div>
   );
 };
