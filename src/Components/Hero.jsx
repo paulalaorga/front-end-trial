@@ -17,8 +17,8 @@ const Hero = () => {
         backgroundImage: `url(${bgImage})`,
         backgroundPosition:'center',
         backgroundSize:'cover',
-        height: '50vh',
-        width: '100vw',
+        height: '70vh',
+        width: '100%',
       }}
     >
         <h1>Lorem Ipsum</h1>
