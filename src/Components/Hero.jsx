@@ -18,9 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div 
-      className="hero" 
-    >
+    <div className="hero" >
         <h1>{isFirstVisit ? 'Lorem Ipsum' : 'Dolor Amit'}</h1>
         <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Vestibulum Vehicula Mauris, Oro Vel Faucibus At Tristique</p>
         <Button isFirstVisit={isFirstVisit} />
