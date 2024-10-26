@@ -1,10 +1,10 @@
 import React from 'react';
 import '../index.css';
 
-const Button = ({ label, onClick }) => {
+const Button = ({ isFirstVisit }) => {
     return (
-        <button className='button' onClick={onClick}>
-            Button Label
+        <button className={isFirstVisit ? 'button' : 'button-2'} >
+            {isFirstVisit ? 'Button Label' : 'New Button Label'}
         </button>
     );
 };
