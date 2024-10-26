@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
 }
 
 .header {
@@ -82,6 +83,8 @@
   
 
 .hero {
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,12 +96,41 @@
     background-image: url('https://tf-frontend.netlify.app/images/v1/bgimage.png');
 }
 
+@media screen and (min-width: 768px) {
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Components/ondas/ondas izda.png');
+    background-size: cover; 
+    background-position: left top;
+    background-repeat: no-repeat;
+    z-index: 1; 
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Components/ondas/ondas dcha.png');
+    background-size: cover;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+}
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     letter-spacing: 1.5px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: white;
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
@@ -148,9 +180,9 @@
 .main h2 {
     text-align: center;
     margin: 3.5rem;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-family: 'Red Hat Display', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .cards-container {
@@ -174,6 +206,11 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.card p {
+   font-family: work sans;
+    font-size: 0.875rem;
 }
 
 .tag {
