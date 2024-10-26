@@ -3,27 +3,27 @@ import '../index.css';
 import Button from './Button';
 
 const Hero = () => {
-  const [bgImage, setBgImage] = useState('');
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
 
   useEffect(() => {
-    const imageUrl = 'https://tf-frontend.netlify.app/images/v1/bgimage.png';
-    setBgImage(imageUrl);
+
+    const hasVisited = localStorage.getItem('hasVisited');
+    console.log('hasVisted?:', hasVisited); 
+    if (hasVisited) {
+      setIsFirstVisit(false);
+    } else {
+      setIsFirstVisit(true);
+      localStorage.setItem('hasVisited', 'true');
+    }
   }, []);
 
   return (
     <div 
       className="hero" 
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition:'center',
-        backgroundSize:'cover',
-        height: '70vh',
-        width: '100%',
-      }}
     >
-        <h1>Lorem Ipsum</h1>
+        <h1>{isFirstVisit ? 'Lorem Ipsum' : 'Dolor Amit'}</h1>
         <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Vestibulum Vehicula Mauris, Oro Vel Faucibus At Tristique</p>
-        <Button/>
+        <Button isFirstVisit={isFirstVisit} />
     </div>
   );
 };

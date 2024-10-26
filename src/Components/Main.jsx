@@ -3,6 +3,7 @@ import CTA from './CTA';
 import Card from './Card';
 
 const Main = () => {
+
     const cardsData = [
         {
             date: "23-02-22",
